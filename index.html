@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>橘猫(=｀ω´=)——年轻人的建站服务</title>
+    <link rel="stylesheet" href="./css/vivify.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<header>
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <nav>
+        <div class="logo vivify driveInLeft delay-500">
+            <span class="cat-icon">🐈</span>
+            橘猫    ●    年轻人的建站服务
+        </div>
+        <div class="left-menu vivify driveInRight delay-500">
+            <span id="tellBtn">联系橘猫</span>
+        </div>
+    </nav>
+    <div class="main-title-box">
+        <p class="main-title-english">orange cat</p>
+        <h1 class="vivify fadeInBottom">橘猫网络工作室</h1>
+        <p>一群IT90后的聚集地<br>用青春、激情、自由的心连接你我</p>
+        <div class="to-friend-box">
+            <span class="mimi-join" id="maoJoin">(=｀ω´=)</span>
+            <button class="to-friend-btn" @mouseenter="showJoin" @mouseleave="hideJoin" id="friendBtn">
+                和橘猫成为朋友
+            </button>
+        </div>
+
+    </div>
+</header>
+<!--成员介绍-->
+<div class="man-info gard-box">
+    <p class="gard-title"><span class="cat-icon-first">🐈</span>工作室主要成员</p>
+    <ul class="man-box">
+        <li class="man-info-list">
+            <span class="fun-name">万年单身前端汪</span>
+            <div class="man-img">
+                <img src="./img/1.jpg" alt="">
+            </div>
+            <p>掌控javascript、html、css的男银</p>
+        </li>
+        <li class="man-info-list">
+            <span class="fun-name">最佳男主PHP</span>
+            <div class="man-img">
+                <img src="./img/2.jpg" alt="">
+            </div>
+            <p>会搞前端的PHP工程师</p>
+        </li>
+        <li class="man-info-list">
+            <span class="fun-name">伏地吃鸡设计鸡</span>
+            <div class="man-img">
+                <img src="./img/6.jpg" alt="">
+            </div>
+            <p>虎课网讲师、优质高产的设计师</p>
+        </li>
+        <li class="man-info-list">
+            <span class="fun-name">微信开发扛把子</span>
+            <div class="man-img">
+                <img src="./img/4.jpg" alt="">
+            </div>
+            <p>一个会微信开发的后端帅气程序猿</p>
+        </li>
+    </ul>
+</div>
+<div class="gard-box work-box">
+    <!--作品-->
+    <p class="gard-title"><span class="cat-icon">🐈</span>工作室作品</p>
+    <ul class="work-content">
+        <li class="work-list">
+            <img src="./img/work-jsk.png" alt="">
+            <p class="work-img-title">技术库——专业的程序员内容创作平台</p>
+        </li>
+        <li class="work-list text-left">
+            <img src="./img/work-jhzc.png" alt="">
+            <p class="work-img-title">技术库——专业的程序员内容创作平台</p>
+        </li>
+        <li class="work-list">
+            <img src="./img/work-jsk.png" alt="">
+            <p class="work-img-title">技术库——专业的程序员内容创作平台</p>
+        </li>
+        <li class="work-list text-left">
+            <img src="./img/work-jsk.png" alt="">
+            <p class="work-img-title">技术库——专业的程序员内容创作平台</p>
+        </li>
+    </ul>
+</div>
+<div class="gard-box">
+    <!--作品-->
+    <p class="gard-title"><span class="cat-icon">🐈</span>业务范畴</p>
+</div>
+<script src="./js/vue.js"></script>
+<script>
+    //浏览器窗口切换改页面标题
+    document.addEventListener('visibilitychange',function () {
+        if(document.visibilityState==="hidden"){
+            document.title='(●ↀωↀ●)✧你快回来~';
+        }else{
+            document.title='橘猫(=｀ω´=)——年轻人的建站服务';
+        }
+    });
+    var vm = new Vue({
+        el: '#friendBtn',
+        data: {
+            message: '默认值'
+        },
+        methods: {
+            showJoin: function(){
+               document.getElementById('maoJoin').style.display="block";
+            },
+            hideJoin: function(){
+                document.getElementById('maoJoin').style.display="none";
+            }
+        }
+    });
+</script>
+</body>
+</html>
