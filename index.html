@@ -7,7 +7,7 @@
     <title>橘猫(=｀ω´=)——年轻人的建站服务</title>
     <link rel="stylesheet" href="./css/vivify.min.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_589009_mjsxdmzsllzestt9.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_589009_m82evhskljj4te29.css">
 </head>
 <body>
 <header>
@@ -28,8 +28,11 @@
             <span class="cat-icon">🐈</span>
             橘猫    ●    年轻人的建站服务
         </div>
-        <div class="left-menu vivify driveInRight delay-500">
-            <span id="tellBtn">联系橘猫</span>
+        <div class="left-menu vivify driveInRight delay-500" id="app">
+            <a href="#manBox">成员列表</a>
+            <a href="#workBox">业务范畴</a>
+            <a href="#productBox">主要作品</a>
+            <span id="tellBtn" @click="show">联系橘猫</span>
         </div>
     </nav>
     <div class="main-title-box">
@@ -46,7 +49,7 @@
     </div>
 </header>
 <!--成员介绍-->
-<div class="man-info gard-box">
+<div class="man-info gard-box" id="manBox">
     <p class="gard-title"><span class="cat-icon-first">🐈</span>工作室主要成员</p>
     <ul class="man-box">
         <li class="man-info-list">
@@ -79,7 +82,7 @@
         </li>
     </ul>
 </div>
-<div class="gard-box product-box">
+<div class="gard-box product-box" id="workBox">
     <!--作品-->
     <p class="gard-title"><span class="cat-icon">🐈</span>业务范畴</p>
     <p class="product-text">网站策划，网站制作，网站优化，网络建设技术支持</p>
@@ -115,7 +118,7 @@
 
     </div>
 </div>
-<div class="gard-box work-box">
+<div class="gard-box work-box" id="productBox">
     <!--作品-->
     <p class="gard-title"><span class="cat-icon">🐈</span>工作室作品</p>
     <ul class="work-content">
@@ -137,13 +140,21 @@
         </li>
     </ul>
 </div>
-<div class="gard-box link-us">
-  <!--  <p class="gard-title"><span class="cat-icon">🐈</span>联系橘猫</p>-->
-</div>
+<!--<div class="gard-box link-us">
+  &lt;!&ndash;  <p class="gard-title"><span class="cat-icon">🐈</span>联系橘猫</p>&ndash;&gt;
+</div>-->
 <footer>
     <a href="">技术库——自由的程序员内容创作平台</a>
     <div class="to-right">©橘猫网络工作室</div>
 </footer>
+<!--us-->
+<div class="wrap-box" id="wrapBox">
+    <div class="our-box">
+        <img src="./img/man-wxID.jpg" alt="" class="wx-img">
+        <p class="wx-text"><i class="iconfont icon-saoyisao"></i>扫一扫添加橘猫负责人微信</p>
+        <p class="tel-num"><i class="iconfont icon-phone"></i>Tel：13139214701</p>
+    </div>
+</div>
 <script src="./js/vue.js"></script>
 <script>
     //浏览器窗口切换改页面标题
@@ -168,6 +179,19 @@
             }
         }
     });
+</script>
+<script>
+    new Vue({
+        el: '#tellBtn',
+        data: {
+            visible: false
+        },
+        methods: {
+            show: function () {
+                document.getElementById('wrapBox').style.display="block";
+            }
+        }
+    })
 </script>
 </body>
 </html>

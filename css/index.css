@@ -18,6 +18,7 @@
   --10-padding:10px;
   --15-padding:15px;
 }
+/*哀悼日html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter:grayscale(100%);}*/
 /*css reset*/
 html,body,h1,h2,h3,h4,h5,h5,ul,p{
   margin:var(--0-margin);
@@ -160,6 +161,14 @@ header nav .logo{
 header nav .left-menu{
     float:right;
 }
+header nav .left-menu a{
+  color: #fff;
+  margin-right: 15px;
+  text-decoration: none;
+}
+header nav .left-menu span{
+  cursor: pointer;
+}
 .main-title-box{
     width: 85%;
   margin: var(--0-margin) auto;
@@ -232,7 +241,7 @@ p.main-title-english {
 .gard-title{
    display: block;
   margin:auto;
-  margin-bottom: 20px;
+  margin-bottom:40px;
   margin-top: 40px;
   text-align: center;
   font-size: 16px;
@@ -306,6 +315,7 @@ p.main-title-english {
   padding: 15px;
   text-align:right;
   margin-bottom: 15px;
+  background-color: #fff;
 }
 .work-content li img{
   width: 85%;
@@ -363,10 +373,10 @@ i.iconfont.icon-xiaochengxu{
 }
 .link-us{
   padding: 15px 60px;
-  height: 600px;
-  background: url("../img/link.jpg") 0 0 no-repeat;
+/*  height: 600px;*/
+/*  background: url("../img/link.jpg") 0 0 no-repeat;*/
   background-size:cover ;
-  margin-top: -360px;
+  /*margin-top: -360px;*/
   z-index: -1;
   position: relative;
   padding-top:100px;
@@ -386,4 +396,61 @@ footer a{
 }
 footer .to-right{
   float:right;
+}
+.work-list p.work-img-title {
+  padding-left: 80px;
+}
+.work-list.text-left p.work-img-title {
+  padding-right: 120px;
+}
+.our-box{
+  padding:10px 50px;
+  width: 300px;
+  padding-top: 35px;
+  border-radius: 15px;
+
+}
+.our-box .tel-num{
+  font-size: 14px;
+  text-align: left;
+}
+.our-box .wx-img{
+  width: 200px;
+  height: 200px;
+  border:1px solid var(--main-color);
+  object-fit: cover;
+}.our-box .wx-text{
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: left;
+ }
+.our-box i.iconfont{
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+.wrap-box{
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color: rgba(55,55,55,.6);
+  display: none;
+}
+.wrap-box .our-box{
+  position: relative;
+  outline: 0;
+  top: 100px;
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--main-color);
 }
