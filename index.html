@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/vivify.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_589009_m82evhskljj4te29.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_595347_9lfzdkyhbna02j4i.css">
 </head>
 <body>
 <header>
@@ -28,11 +29,23 @@
             <span class="cat-icon">🐈</span>
             橘猫    ●    年轻人的建站服务
         </div>
-        <div class="left-menu vivify driveInRight delay-500" id="app">
+        <div class="left-menu vivify driveInRight delay-500">
             <a href="#manBox">成员列表</a>
             <a href="#workBox">业务范畴</a>
             <a href="#productBox">主要作品</a>
-            <span id="tellBtn" @click="show">联系橘猫</span>
+            <a href="#aboutUs">联系橘猫</a>
+        </div>
+    </nav>
+    <nav id="scrollNav">
+        <div class="logo">
+            <span class="cat-icon">🐈</span>
+            橘猫    ●    年轻人的建站服务
+        </div>
+        <div class="left-menu">
+            <a href="#manBox">成员列表</a>
+            <a href="#workBox">业务范畴</a>
+            <a href="#productBox">主要作品</a>
+            <a href="#aboutUs">联系橘猫</a>
         </div>
     </nav>
     <div class="main-title-box">
@@ -41,7 +54,7 @@
         <p>一群IT90后的聚集地<br>用青春、激情、自由的心连接你我</p>
         <div class="to-friend-box">
             <span class="mimi-join" id="maoJoin">(=｀ω´=)</span>
-            <button class="to-friend-btn" @mouseenter="showJoin" @mouseleave="hideJoin" id="friendBtn">
+            <button class="to-friend-btn vivify ball" @mouseenter="showJoin" @mouseleave="hideJoin" id="friendBtn" @click="show">
                 和橘猫成为朋友
             </button>
         </div>
@@ -83,7 +96,6 @@
     </ul>
 </div>
 <div class="gard-box product-box" id="workBox">
-    <!--作品-->
     <p class="gard-title"><span class="cat-icon">🐈</span>业务范畴</p>
     <p class="product-text">网站策划，网站制作，网站优化，网络建设技术支持</p>
     <div>
@@ -104,7 +116,7 @@
         <ul class="product-content">
             <li class="product-list">
                 <i class="iconfont icon-msnui-website"></i>
-                <p>网站设计、网站制作</p>
+                <p>响应式网站定制</p>
             </li>
             <li class="product-list">
                 <i class="iconfont icon-weixingongzhonghao"></i>
@@ -112,7 +124,7 @@
             </li>
             <li class="product-list">
                 <i class="iconfont icon-xiaochengxu"></i>
-                <p>微信小程序开发</p>
+                <p>微信小程序定制开发</p>
             </li>
         </ul>
 
@@ -121,9 +133,10 @@
 <div class="gard-box work-box" id="productBox">
     <!--作品-->
     <p class="gard-title"><span class="cat-icon">🐈</span>工作室作品</p>
+    <p class="work-box-text">用心之作    绝不含糊</p>
     <ul class="work-content">
         <li class="work-list">
-            <img src="./img/work-jsk.png" alt="">
+            <img class="" src="./img/work-jsk.png" alt="">
             <p class="work-img-title">技术库——自由的程序员内容创作平台</p>
         </li>
         <li class="work-list text-left">
@@ -140,14 +153,27 @@
         </li>
     </ul>
 </div>
-<!--<div class="gard-box link-us">
-  &lt;!&ndash;  <p class="gard-title"><span class="cat-icon">🐈</span>联系橘猫</p>&ndash;&gt;
-</div>-->
+<div class="gard-box link-us" id="aboutUs">
+   <p class="gard-title"><span class="cat-icon">🐈</span>联系橘猫</p>
+    <div class="us-info">
+        <p>
+            橘猫网络工作室是一群具有丰富的行业经验和对时代信息具有敏锐捕捉感的工作在互联网行业一线的年轻人所组建，旨在通过用最前沿的技术为您提供互联网产品一站式服务。
+        </p>
+        <span>Address:&nbsp;&nbsp;兰州市城关区高新技术创新园创业楼c座8层</span>
+        <span>Email:&nbsp;&nbsp;jumao@gmail.com</span>
+        <span>Tel:&nbsp;&nbsp;13139214701</span>
+        <div>
+            <a title="添加橘猫为微信好友" onclick="showDrop()"><i class="iconfont icon-weixin"></i></a>
+            <a title="添加橘猫技术交流群" target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=8c24eba19bb645383274f96759f389da8035ecbca9c759ff76da2eabc097802d"><i class="iconfont icon-qq"></i></a>
+            <i title="在gitHUb上查看橘猫" class="iconfont icon-GitHub"></i>
+        </div>
+    </div>
+</div>
 <footer>
     <a href="">技术库——自由的程序员内容创作平台</a>
     <div class="to-right">©橘猫网络工作室</div>
 </footer>
-<!--us-->
+<!--usbox-->
 <div class="wrap-box" id="wrapBox">
     <div class="our-box">
         <img src="./img/man-wxID.jpg" alt="" class="wx-img">
@@ -156,6 +182,7 @@
     </div>
 </div>
 <script src="./js/vue.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script>
     //浏览器窗口切换改页面标题
     document.addEventListener('visibilitychange',function () {
@@ -172,26 +199,43 @@
         },
         methods: {
             showJoin: function(){
-               document.getElementById('maoJoin').style.display="block";
+                $("#maoJoin").fadeIn();
             },
             hideJoin: function(){
-                document.getElementById('maoJoin').style.display="none";
+                $("#maoJoin").fadeOut();
+            },
+            show:function () {
+                $("#wrapBox").fadeIn();
             }
         }
     });
 </script>
 <script>
-    new Vue({
-        el: '#tellBtn',
-        data: {
-            visible: false
-        },
-        methods: {
-            show: function () {
-                document.getElementById('wrapBox').style.display="block";
-            }
+    //页面滚动展示
+    $(window).scroll(function () {
+        var winPos = $(window).scrollTop();
+        if(winPos > 1100){
+            $('.work-content li img').addClass("vivify fadeInBottom").css("visibility","visible");
         }
-    })
+        else if(winPos > 100){
+            $("#scrollNav").fadeIn();
+        }
+        else if(winPos < 100){
+            $("#scrollNav").fadeOut();
+        }
+    });
+    $("#friendBtn").hover(function () {
+        $(this).addClass("");
+    });
+    setInterval (function () {
+        $(".to-friend-btn").show();
+    }, 1600);
+    $("#wrapBox").click(function(){
+        $(this).fadeOut();
+    });
+    function showDrop() {
+        $("#wrapBox").fadeIn();
+    }
 </script>
 </body>
 </html>

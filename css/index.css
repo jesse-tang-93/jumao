@@ -198,7 +198,7 @@ p.main-title-english {
   text-align: center;
 }
 .to-friend-btn{
-  display: block;
+  display:none;
   margin: auto;
   margin-top: 60px;
   background-color: var(--main-color);
@@ -219,7 +219,7 @@ p.main-title-english {
 .mimi-join{
   position: absolute;
   right: 40%;
-  top:-10px;
+  top:50px;
   transform: rotate(20deg);
   z-index: 1;
   display: none;
@@ -323,6 +323,7 @@ p.main-title-english {
   border-radius: 10px;
   height: 224px;
   object-fit: fill;
+  visibility: hidden;
 }
 li.text-left{
   text-align: left;
@@ -373,13 +374,9 @@ i.iconfont.icon-xiaochengxu{
 }
 .link-us{
   padding: 15px 60px;
-/*  height: 600px;*/
-/*  background: url("../img/link.jpg") 0 0 no-repeat;*/
   background-size:cover ;
-  /*margin-top: -360px;*/
-  z-index: -1;
+  /*z-index: -1;*/
   position: relative;
-  padding-top:100px;
 }
 footer{
   padding: 5px 30px;
@@ -453,4 +450,40 @@ footer .to-right{
   margin: 0 auto;
   text-align: center;
   color: var(--main-color);
+}
+.work-box-text{
+  text-align: center;
+}
+p.work-box-text {
+  margin-bottom: 15px;
+}
+.link-us .us-info span{
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.link-us {
+  text-align: center;
+}
+.us-info p{
+  padding: 15px 220px;
+}
+.us-info i.iconfont{
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffd748;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top:30px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+#scrollNav{
+  position: fixed;
+  right: 0;
+  top:0;
+  left: 0;
+  background-color: rgba(51,121,228,.8);
+  z-index: 9;
+  display: none;
 }
